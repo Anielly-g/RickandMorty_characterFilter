@@ -1,0 +1,478 @@
+.error-message {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.charactersGrid {
+  margin-top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1480px; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+
+.characterCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  width: 280px;
+  background:  #F5F5F5;
+  border-radius: 0px 0px 50px 50px;
+  transition: height 0.3s ease, margin-bottom 0.3s ease; 
+  margin-bottom: 30%;
+  margin-left: 10%;
+  
+}
+
+.characterCard:hover {
+  height: auto;
+  margin-bottom: 135%;
+}
+
+.characterCard img {
+  width: 100%;
+  height: 55%;
+  object-fit: cover;
+  margin-top: -10%;
+  
+}
+
+.characterCard:hover img {
+  height: 100%;
+}
+
+.characterName {
+  text-align:left;
+  margin-left: 5.5%;
+  margin-top: 5%;
+  background-color:   #F5F5F5;
+  font-size: 24px;
+  border-radius: 8px 8px 0 0;
+  padding: 5%;
+  width: 70%;
+  border-radius: 0px 0px 20px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.characterDetails {
+  display: none;
+  position: absolute;
+  top: 90%; 
+  left: 0;
+  width: 100%; 
+  background-color:  #F5F5F5;
+  border-radius: 0 0 8px 8px;
+  height: 90%;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.characterCard:hover .characterDetails {
+  display: block;
+}
+
+.characterDetails p {
+  margin: 0;
+}
+
+.characterDetails p:first-child {
+  font-weight: bold;
+}
+
+.characterDetails p:not(:first-child) {
+  margin-top: 5px;
+}
+
+.vejaMais {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  width: 55%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  background-color: #33B4C4;
+  color: #fff;
+  padding: 10px 10px; 
+  border-radius: 25px; 
+  font-size: 18px;
+}
+.vejaMais:hover {
+  background-color: #2d9cac; 
+}
+.pagination{
+  margin-left: 40%;
+  margin-bottom: 5%;
+}
+
+.paginationButton {
+  padding: 1% 2%;
+  border: none; 
+  background-color: transparent; 
+  cursor: pointer;
+  font-size: 24px; 
+  color: #333; 
+}
+
+.paginationButton:hover {
+  background-color: #f0f0f0;
+}
+
+.paginationButton.active {
+  color:#CFE071; 
+}
+
+.arrow {
+  color: #CFE071;; 
+}
+
+.characterContainer {
+  flex: 0 0 calc(25% - 20px);
+  margin-bottom: 20px;
+  transition: margin-top 0.3s ease;
+}
+
+
+.header{
+  height: 80%;
+  width: 100%;
+
+}
+
+.headerBackground {
+  background-image: url('./rick.jpg'); 
+  position: absolute; 
+  height: 100%; 
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center top; 
+  filter: brightness(40%);
+  margin-top: -10%;
+}
+
+.headerTitle {
+  margin-top: 17%;
+  margin-left: 12%;
+  font-size: 60px;
+  font-weight: 700px;
+  color: #ffffff; 
+  position: absolute;
+ 
+}
+
+.headerText {
+  margin-top: 20%;
+  margin-left: 12%;
+  color: #ffffff; 
+  position: absolute;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  margin-bottom: 0;
+}
+
+.searchContainer {
+  position: relative;
+  display: inline-block;
+  margin-top: 43%;
+  margin-left: 12%;
+  font-weight: 1000px;
+}
+
+.searchInput {
+  width: 300%; 
+  padding: 15%;
+  border: 2px solid #474747;
+  border-radius: 20px;
+  
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  right: -350px; 
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.additionalInfo table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10%;
+}
+
+.additionalInfo td {
+  padding: 8px;
+  text-align: center;
+}
+
+.additionalInfo td:first-child {
+  border-left: none;
+}
+
+.additionalInfo td:last-child {
+  border-right: none;
+}
+
+.additionalInfo td:nth-child(2) {
+  border-left: none;
+  border-right: none;
+}
+
+.additionalInfo tr {
+  margin-left: 10%;
+}
+
+
+.pers{
+  font-size: 90%;
+  font-style: italic;
+  color: grey;
+  padding-left: 10%;
+  padding-top: 30%;
+  
+}
+
+.trName{
+  font-size: 90%;
+  font-style: italic;
+  padding-left: 25%;
+  padding-top: 0;
+  
+}
+
+.headerText p {
+  margin-top: 0 px; 
+}
+
+
+/*responsividade pra telefone:*/
+
+@media (max-width: 768px) {
+  .headerBackground {
+    margin-top: 12%; 
+    background-size: contain; 
+    height:140%;
+  }
+
+  .headerTitle {
+    margin-top: 28%; 
+    font-size: 30px; 
+  }
+
+  .headerText {
+    margin-top: 45%; 
+    margin-left: 20%;
+    font-size: 12px; 
+    
+  }
+  .headerText p {
+    
+    margin: -30px; 
+  }
+  
+
+  .searchContainer {
+    margin-top: 80%; 
+  }
+
+  .searchInput {
+    width: 95%; 
+    padding: 10px; 
+    font-size: 16px; 
+    border: 2px solid #474747;
+    border-radius: 10px;
+  }
+
+  .searchIcon {
+    right: 15px; 
+  }
+
+  .characterContainer {
+    flex: 0 0 calc(50% - 20px);
+    margin-bottom: 10px; 
+  }
+
+  .pagination {
+    margin-left: 10%; 
+    margin-bottom: 2%; 
+  }
+
+  .paginationButton {
+    font-size: 18px; 
+  }
+
+  .pers {
+    padding-top: 20%; 
+  }
+
+  .trName {
+    padding-left: 20%; 
+  }
+
+  .characterCard {
+    padding: 0;
+    width: 300px;
+    background:  #F5F5F5;
+    border-radius: 0px 0px 50px 50px;
+    transition: height 0.3s ease, margin-bottom 0.3s ease; 
+    margin-top: 20%;
+    margin-bottom: 70%;
+    margin-left: 12%;
+    
+  }
+  
+  .characterCard:hover {
+    height: auto;
+    margin-bottom: 200%; 
+  }
+  
+  .characterCard img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    margin-top: -10%;
+    
+  }
+
+  .characterDetails {
+    display: block;
+    top: 90%; 
+    left: 0;
+    width: 100%; 
+    height: 80%;
+    
+  }
+  
+  .characterName {
+    
+    margin-top: 0.9%;
+    font-size: 20px;
+    width: 70%;
+  }
+  .pagination{
+    margin-left: 18%;
+    margin-top: 15%;
+    margin-bottom: 2%;
+  }
+  
+
+}
+
+@media (min-width: 769px) and (max-width: 1360px) {
+  .headerBackground {
+    margin-top: 11%; 
+    background-size: contain; 
+    height:120%;
+  }
+
+  .headerTitle {
+    margin-top: 38%; 
+    font-size: 50px; 
+  }
+
+  .headerText {
+    margin-top: 52%; 
+    margin-left: 16%;
+    font-size: 18px; 
+    
+  }
+  .headerText p {
+    
+    margin: -30px; 
+  }
+  
+
+  .searchContainer {
+    margin-top: 80%; 
+  }
+
+  .searchInput {
+    width: 120%; 
+    padding: 20px; 
+    font-size: 20px; 
+    border: 2px solid #474747;
+    border-radius: 15px;
+  }
+
+  .searchIcon {
+    margin-right: 80%; 
+  }
+
+  .characterContainer {
+    flex: 0 0 calc(50% - 20px); 
+    margin-bottom: 10px; 
+  }
+
+  .pagination {
+    margin-left: 10%; 
+    margin-bottom: 2%; 
+  }
+
+  .paginationButton {
+    font-size: 18px; 
+  }
+
+  .pers {
+    padding-top: 20%; 
+  }
+
+  .trName {
+    padding-left: 20%; 
+  }
+
+  .characterCard {
+    padding: 0;
+    width: 300px;
+    background:  #F5F5F5;
+    border-radius: 0px 0px 50px 50px;
+    transition: height 0.3s ease, margin-bottom 0.3s ease; 
+    margin-top: 20%;
+    margin-bottom: 60%;
+    margin-left: 12%;
+    
+  }
+  
+  .characterCard:hover {
+    height: auto;
+    margin-bottom: 200%; 
+  }
+  
+  .characterCard img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    margin-top: -10%;
+    
+  }
+
+  .characterDetails {
+    display: block;
+    top: 90%; 
+    left: 0;
+    width: 100%; 
+    height: 80%;
+    
+  }
+  
+  .characterName {
+    
+    margin-top: 0.9%;
+    font-size: 20px;
+    width: 70%;
+  }
+  .pagination{
+    margin-left: 28%;
+    margin-top: 20%;
+    margin-bottom: 60%;
+  }
+  
+
+}

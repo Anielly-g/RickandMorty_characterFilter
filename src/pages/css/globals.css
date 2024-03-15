@@ -1,0 +1,15 @@
+
+@font-face {
+  font-family: 'Nono Sans';
+  src: url('/src/pages/Noto_Sans/static/NotoSans-Black.ttf') format('truetype'); 
+}
+
+#text-element {
+  font-family: 'Nono Sans', Arial, sans-serif;
+}
+html,
+body {
+  padding: 0;
+  font-family: 'Nono Sans', sans-serif;
+  margin: 0;
+}
